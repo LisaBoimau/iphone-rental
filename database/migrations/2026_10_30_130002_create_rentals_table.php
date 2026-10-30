@@ -12,9 +12,9 @@ return new class extends Migration
             $table->id();
             $table->foreignId('customer_id')->constrained('customers')->cascadeOnDelete();
             $table->foreignId('iphone_id')->constrained('iphones')->cascadeOnDelete();
-            $table->date('tgl_pinjam');
+            $table->dateTime('tgl_pinjam');
             $table->integer('durasi_jam');
-            $table->date('tgl_kembali')->nullable();
+            $table->dateTime('tgl_kembali')->nullable();
             $table->string('status_rental')->default('Aktif');
             $table->timestamps();
         });
